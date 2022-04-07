@@ -70,7 +70,7 @@ public class PhoneBookTests {
 
     private static Stream<Arguments> sourceForFillContact() {
         return Stream.of(Arguments.of(new String[]{"иван", "иванов", "12345"}, Group.WORK,
-                        new Contact("иван", "иванов", "12345", null)),
+                        new Contact("иван", "иванов", "12345", Group.WORK )),
                 Arguments.of(new String[]{"мария", "иванова", "123"}, Group.valueOf("WORK"),
                         new Contact("мария", "иванова", "123", Group.WORK)));
     }

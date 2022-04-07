@@ -21,12 +21,13 @@ public class Contact {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Contact contact = (Contact) o;
-        return Objects.equals(name, contact.name) && Objects.equals(surname, contact.surname) && Objects.equals(telephoneNumber, contact.telephoneNumber);
+        return Objects.equals(name, contact.name) && Objects.equals(surname, contact.surname)
+                && Objects.equals(telephoneNumber, contact.telephoneNumber) && Objects.equals(group, contact.group);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, telephoneNumber);
+        return Objects.hash(name, surname, telephoneNumber, group);
     }
 
     public String getName() {
